@@ -1,0 +1,20 @@
+{
+  "name": "ci4-boilerplate",
+  "scripts": {
+    "sass:watch": "sass --no-source-map --style compressed --watch ./scss/bootstrap.scss ./public/css/bootstrap.css",
+    "sass:build": "sass --no-source-map --style compressed ./scss/bootstrap.scss ./public/css/bootstrap.css",
+    "gulp": "gulp startServer",
+    "start": "concurrently \"npm run sass:watch\" \"npm run gulp\""
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.4.5",
+    "gulp": "^4.0.2",
+    "sass": "^1.72.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3"
+  }
+}
