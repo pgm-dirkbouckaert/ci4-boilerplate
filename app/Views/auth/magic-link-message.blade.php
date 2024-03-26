@@ -6,11 +6,12 @@
 
     <div class="w-100 card shadow">
       <div class="card-body">
-        <h3 class="card-title mb-5">{{ lang('Auth.useMagicLink') }}</h3>
+        {{-- <h3 class="card-title mb-5">{{ lang('Auth.useMagicLink') }}</h3> --}}
 
         <p><b>{{ lang('Auth.checkYourEmail') }}</b></p>
 
         <p>{{ lang('Auth.magicLinkDetails', [setting('Auth.magicLinkLifetime') / 60]) }}</p>
+        <p>{{ lang('Auth.afterMagicLinkLogin') }}</p>
       </div>
     </div>
   </div>
