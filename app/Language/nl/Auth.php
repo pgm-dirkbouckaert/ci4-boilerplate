@@ -3,41 +3,68 @@
 namespace Myth\Auth\Language\nl;
 
 return [
-  'firstname'           => 'Voornaam',
-  'lastname'            => 'Familienaam',
-  'username'            => 'Gebruikersnaam',
-  'register'            => 'Registreren',
-  'signIn'              => 'Inloggen',
-  'needAnAccount'       => 'Account nodig?',
-  'noAccount'           => 'Geen account? Registreren.',
-  'alreadyRegistered'   => 'Al geregistreerd?',
-  'passwordConfirm'     => 'Bevestig wachtwoord',
+
+  // User
+  'firstname'                 => 'Voornaam',
+  'lastname'                  => 'Familienaam',
+  'username'                  => 'Gebruikersnaam',
+  'email'                     => 'E-mailadres',
+  'emailAddress'              => 'E-mailadres',
+  'password'                  => 'Wachtwoord',
+  'passwordConfirm'           => 'Bevestig wachtwoord',
+  'repeatPassword'            => 'Herhaal wachtwoord',
+
+  // Login
+  'login'                     => 'Inloggen',
+  'logout'                    => 'Uitloggen',
+  'badAttempt'                => 'Inloggen mislukt. Controleer je gegevens.',
+  'loginSuccess'              => 'Welkom terug!',
+  'invalidPassword'           => 'Inloggen mislukt. Controleer je wachtwoord.',
+  'signIn'                    => 'Inloggen',
+  'rememberMe'                => 'Wachtwoord onthouden',
+  'noAccount'                 => 'Geen account? Registreren.',
+  'needAnAccount'             => 'Account nodig?',
+  'haveAccount'               => 'Heb je al een account?',
+  'alreadyRegistered'         => 'Al geregistreerd?',
   'errorPasswordTooLongBytes' => 'Wachtwoord is te lang.',
   'forgotPassword'            => 'Wachtwoord vergeten?',
   'forgotYourPassword'        => 'Wachtwoord vergeten?',
   'passwordNoMatch'           => 'Wachtwoorden komen niet overeen.',
   'errorPasswordLength'       => 'Het wachtwoord moet minimaal 8 karakters lang zijn.',
   'passwordChanged'           => 'Je wachtwoord is succesvol veranderd',
-  'useMagicLink'              => 'Gebruik een link om in te loggen.',
-  'afterMagicLinkLogin'       => 'Na het inloggen word je automatisch doorverwezen naar de pagina om je wachtwoord te wijzigen.',
-
-  // Exceptions
-  'invalidModel'        => 'Het {0} model moet geladen worden voor gebruik.',
-  'userNotFound'        => 'De gebruiker met ID = {0, number} kan niet worden gevonden.',
-  'noUserEntity'        => 'User Entity moet worden opgegeven voor wachtwoordvalidatie.',
-  'tooManyCredentials'  => 'U mag slechts valideren op basis van 1 andere referentie dan een wachtwoord.',
-  'invalidFields'       => 'Het veld "{0}" kan niet worden gebruikt om inloggegevens te valideren.',
-  'unsetPasswordLength' => 'Je moet de instelling `minimumPasswordLength` instellen in het Auth configuratiebestand.',
-  'unknownError'        => 'Sorry, er is een probleem opgetreden bij het verzenden van de e-mail naar u. Probeer het later nog eens.',
-  'notLoggedIn'         => 'Je moet ingelogd zijn om deze pagina te bekijken.',
-  'notEnoughPrivilege'  => 'Je hebt niet genoeg rechten om deze pagina te bekijken.',
 
   // Registration
-  'registerNotAllowed'  => 'Sorry, u kan momenteel niet registreren.',
-  'registerDisabled' => 'Sorry, nieuwe gebruikersaccounts zijn momenteel niet toegestaan.',
-  'registerSuccess'  => 'Welkom! Log in met uw nieuwe inloggegevens.',
-  'registerCLI'      => 'Nieuwe gebruiker aangemaakt: {0}, #{1}',
-  'personnelOnly'    => 'Alleen voor personeel van CVO GENT.',
+  'register'                  => 'Registreren',
+  'registerDisabled'          => 'Sorry, nieuwe gebruikersaccounts zijn momenteel niet toegestaan.',
+  'registerNotAllowed'        => 'Sorry, u kan momenteel niet registreren.',
+  'registerSuccess'           => 'Welkom! Log in met uw nieuwe inloggegevens.',
+  'registerCLI'               => 'Nieuwe gebruiker aangemaakt: {0}, #{1}',
+  'personnelOnly'             => 'Alleen voor personeel van CVO GENT.',
+
+  // Exceptions
+  'unknownAuthenticator'  => '{0} is geen geldige authenticator.',
+  'unknownUserProvider'   => 'Kan geen geldige gebruikersprovider bepalen.',
+  'invalidUser'           => 'Kan de opgegeven gebruiker niet vinden.',
+  'bannedUser'            => 'Je kan niet inloggen omdat je account geblokkeerd is.',
+  'logOutBannedUser'      => 'Je bent uitgelogd omdat je account geblokkeerd is.',
+  'noPassword'            => 'Kan een gebruiker zonder wachtwoord niet valideren.',
+  'noToken'               => 'Elk verzoek moet een bearer token hebben in de {0} header.',
+  'badToken'              => 'Ongeldige toegangstoken.',
+  'oldToken'              => 'Vervallen toegangstoken.',
+  'noUserEntity'          => 'Gebruikersentiteit moet worden opgegeven voor wachtwoordvalidatie.',
+  'invalidEmail'          => 'We kunnen geen gebruiker vinden met dat e-mailadres.',
+  'unableSendEmailToUser' => 'Sorry, er is een probleem opgetreden bij het verzenden van de e-mail. We konden geen e-mail versturen naar "{0}".',
+  'throttled'             => 'Te veel inlogpogingen van dit IP adres. Probeer het over {0} seconden opnieuw.',
+  'notEnoughPrivilege'    => 'U hebt niet de nodige rechten om de gewenste bewerking uit te voeren.',
+  // JWT Exceptions
+  'invalidJWT'     => 'De token ongeldig.',
+  'expiredJWT'     => 'De token is verlopen.',
+  'beforeValidJWT' => 'De token is nog niet geldig.',
+
+  // Buttons
+  'confirm' => 'Bevestig',
+  'send'    => 'Verzend',
+
 
   // Activation
   'activationNoUser'       => 'Geen gebruiker gevonden met deze activatie code.',
@@ -47,12 +74,19 @@ return [
   'notActivated'           => 'Deze gebruiker is nog niet geactiveerd.',
   'errorSendingActivation' => 'Versturen van activiatielink aan {0} mislukt.',
 
-  // Login
-  'login'           => 'Inloggen',
-  'logout'           => 'Uitloggen',
-  'badAttempt'      => 'Inloggen mislukt. Controleer je gegevens.',
-  'loginSuccess'    => 'Welkom terug!',
-  'invalidPassword' => 'Inloggen mislukt. Controleer je wachtwoord.',
+  // Magic Link
+  'useMagicLink'           => 'Gebruik een link om in te loggen.',
+  'magicLinkSubject'       => 'Jouw login link',
+  'magicTokenNotFound'     => 'Kan de link niet verifiëren.',
+  'magicLinkExpired'       => 'Sorry, de login link verlopen. Vraag een nieuwe aan.',
+  'checkYourEmail'         => 'Check je e-mail!',
+  'magicLinkDetails'       => 'Er is net een e-mail met een login link verstuurd. Deze blijft {0} minuten geldig.',
+  'afterMagicLinkLogin'    => 'Na het inloggen word je automatisch doorverwezen naar de pagina om je wachtwoord te wijzigen.',
+  'magicLinkDisabled'      => 'Login link gebruiken is momenteel niet toegestaan.',
+  'successLogout'          => 'Je bent uitgelogd.',
+  'backToLogin'            => 'Terug naar inloggen',
+  'token'                  => 'Token',
+
 
   // Forgotten Passwords
   'forgotDisabled'  => 'Wachtwoord vergeten is uitgeschakeld.',
@@ -78,11 +112,40 @@ return [
   'userDoesNotExist'          => 'Wachtwoord niet gewijzigd. Gebruiker bestaat niet.',
   'resetTokenExpired'         => 'Sorry. Je reset code is verlopen.',
 
+  // Email Globals
+  'emailInfo'      => 'Informatie over de persoon:',
+  'emailIpAddress' => 'IP Addres:',
+  'emailDevice'    => 'Toestel:',
+  'emailDate'      => 'Datum:',
+
+  // 2FA
+  'email2FATitle'       => 'Twee Factor Authenticatie',
+  'confirmEmailAddress' => 'Bevestig je e-mailadres',
+  'emailEnterCode'      => 'Bevestig je e-mailadres',
+  'emailConfirmCode'    => 'Voer de 6-cijferige code in die we zojuist naar je e-mailadres hebben gestuurd.',
+  'email2FASubject'     => 'Je authenticatie code',
+  'email2FAMailBody'    => 'Je authenticatie code is:',
+  'invalid2FAToken'     => 'Jouw code is ongeldig.',
+  'need2FA'             => 'Je moet een tweefactorverificatie voltooien..',
+  'needVerification'    => 'Controleer je e-mail om je accountactivatie te voltooien.',
+
+  // Activate
+  'emailActivateTitle'    => 'Email Activatie',
+  'emailActivateBody'     => 'We hebben je zojuist een e-mail gestuurd met een code om je e-mailadres te bevestigen. Kopieer die code en plak het hieronder.',
+  'emailActivateSubject'  => 'Jouw activatie code',
+  'emailActivateMailBody' => 'Gebruik de onderstaande code om je account te activeren en de site te gebruiken.',
+  'invalidActivateToken'  => 'De code was niet correct.',
+  'needActivate'          => 'Je moet je registratie voltooien door de code te bevestigen die naar je e-mailadres is gestuurd.',
+  'activationBlocked'     => 'Je moet je account activeren voordat je kunt inloggen.',
+
   // Groups
-  'groupNotFound' => 'Kan groep {0} niet vinden.',
+  'groupNotFound'   => 'Kan groep {0} niet vinden.',
+  'unknownGroup'    => '{0} is geen geldige groep.',
+  'missingTitle'    => 'Groepen moeten een titel hebben.',
 
   // Permissions
-  'permissionNotFound' => 'Kan rechten {0} niet vinden.',
+  'permissionNotFound'  => 'Kan rechten {0} niet vinden.',
+  'unknownPermission'   => '{0} is geen geldige permissie.',
 
   // Banned
   'userIsBanned' => 'Gebruiker is verbannen. Neem contact op met de administrator.',
@@ -94,19 +157,13 @@ return [
   'home'                      => 'Home',
   'current'                   => 'Huidig',
   'enterEmailForInstructions' => 'Geen probleem! Voer hier beneden je e-mailadres in en we sturen je instructies om je wachtwoord te wijzigen.',
-  'email'                     => 'E-mail',
-  'emailAddress'              => 'E-mailadres',
   'sendInstructions'          => 'Verstuur instructies',
   'loginTitle'                => 'Login',
   'loginAction'               => 'Login',
-  'rememberMe'                => 'Onthoud mij',
-  'password'                  => 'Wachtwoord',
-  'repeatPassword'            => 'Herhaal wachtwoord',
   'emailOrUsername'           => 'E-mail of gebruikersnaam',
   'weNeverShare'              => 'We delen je e-mailadres nooit met iemand anders.',
   'resetYourPassword'         => 'Reset je wachtwoord',
   'enterCodeEmailPassword'    => 'Voer de code uit de e-mail, je e-mailadres en nieuwe wachtwoord in.',
-  'token'                     => 'Code',
   'newPassword'               => 'Nieuw wachtwoord',
   'newPasswordRepeat'         => 'Herhaal nieuw wachtwoord',
   'resetPassword'             => 'Reset wachtwoord',
