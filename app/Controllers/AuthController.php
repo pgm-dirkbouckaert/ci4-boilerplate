@@ -74,7 +74,7 @@ class AuthController extends BaseController
    */
   public function handleResetPassword()
   {
-    $password = request()->getPost('password');
+    $password = (string) request()->getPost('password');
     $passwordConfirm = request()->getPost('password_confirm');
 
     if (strlen($password) < 8) {
