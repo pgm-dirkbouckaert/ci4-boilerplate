@@ -1,59 +1,52 @@
-# CodeIgniter 4 Bolierplate with Bootstrap, Blade and Shield
-
-This app is designed to be served in the subfolder 'ci4-boilerplate'.  
-If you want to serve it otherwise, change the parameters in `.env` and the  `RewriteBase` in `.htaccess` accordingly.  
-
-## What is CodeIgniter?
-
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
-
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
-
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
-
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
-
-## Installation & updates
-
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
-
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+# CodeIgniter 4 Boilerplate with Bootstrap, Blade and Shield
 
 ## Setup
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+- Copy `env.example` to `.env` and tailor for your app, specifically:
+  - `app.name`
+  - `app.domain` and `app.path` which are joined to form `app.baseURL`
+  - the database settings
+  - email setttings
 
-## Important Change with index.php
+- This app is designed to be served in the subfolder 'ci4-boilerplate'.  
+If you change `app.path` in `.env`, don't forget to change `RewriteBase` in `.htaccess` accordingly.  
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+- Run `composer install`.  
+- Run `npm install`.
+- Serve your app using e.g. Xammp and create a database  
+  (that corresponds to the settings in `.env`). 
+- Run `php spark shield:setup`.
+- Run `php spark migrate`.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+## What is CodeIgniter?
 
-**Please** read the user guide for a better explanation of how CI4 works!
+CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.  
+More information can be found at the [official site](https://codeigniter.com).  
 
-## Repository Management
+You can read the [user guide](https://codeigniter.com/user_guide/)  
+corresponding to the latest version of the framework.
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+## What is Blade?
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+Blade is the simple, yet powerful templating engine that is included with Laravel.  
+This app implements [BladeOne](https://github.com/EFTEC/BladeOne), a standalone version of the Blade Template Engine  
+that uses a single PHP file and allows you to use Blade outside Laravel.
+
+## What is Shield?
+[Shield](https://shield.codeigniter.com/) is the official authentication and authorization framework for CodeIgniter 4.
+
+## Updates
+
+Use `composer update` whenever there is a new release of the framework.
+
+When updating, check the release notes to see if there are any changes  
+you might need to apply to your `app` folder.  
+
+The affected files can be copied or merged from `vendor/codeigniter4/framework/app`.
 
 ## Server Requirements
 
-PHP version 7.4 or higher is required, with the following extensions installed:
+Codeigniter 4 requires PHP version 7.4 or higher, with the following extensions installed:
 
 - [intl](http://php.net/manual/en/intl.requirements.php)
 - [mbstring](http://php.net/manual/en/mbstring.installation.php)
