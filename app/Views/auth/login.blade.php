@@ -31,13 +31,12 @@
           <div class="mt-4 text-center small">
             <p>
               @if (setting('Auth.allowRegistration'))
-                {{ lang('Auth.needAnAccount') }} <a href="{{ base_url('/register') }}">{{ lang('Auth.register') }}</a>
+                <a href="{{ base_url('/register') }}">{{ lang('Auth.noAccount') }}</a>
               @endif
             </p>
             <p>
               @if (setting('Auth.allowMagicLinkLogins'))
-                {{ lang('Auth.forgotPassword') }}
-                <a href="<?= url_to('magic-link') ?>"><?= lang('Auth.useMagicLink') ?></a>
+                <a href="<?= url_to('magic-link') ?>"><?= lang('Auth.forgotPassword') ?></a>
               @endif
             </p>
           </div>
