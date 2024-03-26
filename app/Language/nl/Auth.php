@@ -18,6 +18,8 @@ return [
   'passwordNoMatch'           => 'Wachtwoorden komen niet overeen.',
   'errorPasswordLength'       => 'Het wachtwoord moet minimaal 8 karakters lang zijn.',
   'passwordChanged'           => 'Je wachtwoord is succesvol veranderd',
+  'useMagicLink'              => 'Gebruik een link om in te loggen.',
+  'afterMagicLinkLogin'       => 'Na het inloggen word je automatisch doorverwezen naar de pagina om je wachtwoord te wijzigen.',
 
   // Exceptions
   'invalidModel'        => 'Het {0} model moet geladen worden voor gebruik.',
