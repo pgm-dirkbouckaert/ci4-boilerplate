@@ -13,10 +13,14 @@ If you change `app.path` in `.env`, don't forget to change `RewriteBase` in `.ht
 
 - Run `composer install`.  
 - Run `npm install`.
+- Run `npm run sass:build`.
 - Serve your app using e.g. Xammp and create a database  
   (that corresponds to the settings in `.env`). 
 - Run `php spark shield:setup`.
 - Run `php spark migrate`.
+- Visit your app at `http::/localhost/ci4-boilerplate`.
+- You can run `npm start`to start a local development server with hot reloading.
+- Bootstrap can be customized in `scss/bootstrap.scss`.
 
 ## What is CodeIgniter?
 
